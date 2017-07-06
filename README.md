@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Extended filters engine
 =======================
 Extended filters engine
@@ -27,5 +28,3 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
-```php
-<?= \sergey_h\xfilter\AutoloadExample::widget(); ?>```
