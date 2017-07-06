@@ -17,5 +17,11 @@
         "psr-4": {
             "sergey_h\\xfilter\\": ""
         }
+    },
+    "repositories":[
+    {
+        "type": "vcs",
+        "url": "https://github.com/sergeyKhashimov/xfilter.git"
     }
+]
 }
