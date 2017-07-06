@@ -1,0 +1,21 @@
+{
+    "name": "sergey-h/yii2-xfilter",
+    "description": "Extended filters engine",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","filters"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sergey-h",
+            "email": "hashimov.sergey@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "sergey_h\\xfilter\\": ""
+        }
+    }
+}
