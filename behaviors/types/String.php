@@ -15,7 +15,6 @@ class String extends XFilterBehavior
 {
     public $behaviors = [];
 
-
     function getType()
     {
         return self::STRING;

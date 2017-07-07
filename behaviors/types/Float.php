@@ -9,6 +9,7 @@
 namespace sergey_h\xfilter\behaviors\types;
 
 
+
 use sergey_h\xfilter\behaviors\XFilterBehavior;
 
 class Float extends XFilterBehavior

@@ -62,4 +62,36 @@ abstract class XFilterBehavior
      */
     abstract function getType();
 
+    /**
+     * @return mixed
+     */
+    public function getFieldName()
+    {
+        return $this->fieldName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRelationName()
+    {
+        return $this->relationName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAlias()
+    {
+        return $this->alias;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
 }

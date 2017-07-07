@@ -11,7 +11,13 @@ use yii\db\ActiveRecord;
  */
 abstract class XFilterDomain extends ActiveRecord
 {
+    /**
+     * @var
+     */
     protected  $query;
+    /**
+     * @var
+     */
     protected  $fields;
 
 
