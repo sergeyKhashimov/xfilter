@@ -1,6 +1,6 @@
 <?php
 
-namespace sergey_h\xfilter;
+namespace sergey_h\xfilter\configurator;
 use yii\db\ActiveRecord;
 
 /**
