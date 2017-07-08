@@ -3,23 +3,22 @@
  * Created by PhpStorm.
  * User: serega
  * Date: 07.07.17
- * Time: 10:02
+ * Time: 10:00
  */
 
 namespace sergey_h\xfilter\behaviors\types;
 
 
+
 use sergey_h\xfilter\behaviors\XFilterBehavior;
 
-class Flag extends XFilterBehavior
+class XFFloat extends XFilterBehavior
 {
 
     public $behaviors = [];
 
     function getType()
     {
-        return self::FLAG;
+        return self::FLOAT;
     }
-
-
 }
