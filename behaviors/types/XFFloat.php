@@ -15,7 +15,20 @@ use sergey_h\xfilter\behaviors\XFilterBehavior;
 class XFFloat extends XFilterBehavior
 {
 
-    public $behaviors = [];
+    public $behaviors = [
+        'equal',
+        'not_equal',
+        'greater_than',
+        'less_than',
+        'greater_or_equal',
+        'less_or_equal',
+        'in',
+        'not_in',
+        'between',
+        'not_between',
+        'null',
+        'not_null',
+    ];
 
     function getType()
     {

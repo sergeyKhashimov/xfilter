@@ -1,0 +1,9 @@
+.xf_row{
+    height: 35px
+}
+.xf_value, .xf_label, .xf_label{
+    height: 30px
+}
+.xf_operator{
+    width: 140px;
+}

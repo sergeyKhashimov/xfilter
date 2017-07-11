@@ -1,7 +1,6 @@
 <?php
 
 namespace sergey_h\xfilter\configurator;
-use yii\db\ActiveRecord;
 
 /**
  * Created by PhpStorm.
@@ -9,38 +8,13 @@ use yii\db\ActiveRecord;
  * Date: 7/6/17
  * Time: 10:31 PM
  */
-abstract class XFilterDomain extends ActiveRecord
+interface XFilterDomain
 {
-    /**
-     * @var
-     */
-    protected  $query;
-    /**
-     * @var
-     */
-    protected  $fields;
-
 
     /** sets array of fields need to filter
      *
      * @return mixed
      */
-    abstract function configure();
-
-    /**
-     * @return mixed
-     */
-    public function getQuery()
-    {
-        return $this->query;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFields()
-    {
-        return $this->fields;
-    }
+     function configure();
 
 }

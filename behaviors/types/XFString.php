@@ -13,7 +13,16 @@ use sergey_h\xfilter\behaviors\XFilterBehavior;
 
 class XFString extends XFilterBehavior
 {
-    public $behaviors = [];
+    public $behaviors = [
+        'equal',
+        'not_equal',
+        'in',
+        'not_in',
+        'like',
+        'not_like',
+        'null',
+        'not_null',
+    ];
 
     function getType()
     {
