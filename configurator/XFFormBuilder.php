@@ -57,12 +57,12 @@ class XFFormBuilder
     public function crateArrayOfValidFields()
     {
         foreach ($this->params as $name => $val){
-            if(!isset($val['operator']) || !isset($val['value'])){
+            if(!isset($val['operator']) ||$val['operator'] == '' || !isset($val['value']) || $val['value']== ''){
                 unset($this->params[$name]);
                 continue;
             }
             $options = [
-              'name'  => XFFormHelper::trimName($name),
+                'name'  => XFFormHelper::trimName($name),
                 'operator' => $val['operator'],
                 'value' => $val['value'],
             ];
@@ -93,5 +93,4 @@ class XFFormBuilder
     {
         return $this->paramsArray;
     }
-
 }

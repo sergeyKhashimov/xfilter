@@ -15,6 +15,12 @@ interface XFilterDomain
      *
      * @return mixed
      */
-     function configure();
+    function configure();
+
+    /**
+     * Name of the field to be distinct in the sql statement
+     * @return string
+     */
+    function distinctField();
 
 }

@@ -14,7 +14,7 @@ use sergey_h\xfilter\behaviors\XFilterBehavior;
 class XFFlag extends XFilterBehavior
 {
 
-    public $behaviors =  [
+    public $behaviors = [
         'equal',
         'not_equal',
         'in',
@@ -29,6 +29,5 @@ class XFFlag extends XFilterBehavior
     {
         return self::FLAG;
     }
-
 
 }

@@ -32,8 +32,8 @@ class XFQueryBuilder
     {
         /** @var XFInpInstance $item */
         foreach ($data as $item) {
-            $methodName = 'build' . str_replace('_', '', ucwords($item->getOperator(), '_'));
-            $filter =  self::$methodName($item);
+            $methodName = 'build' . str_replace(' ', '', ucwords(str_replace('_', ' ', $item->getOperator())));
+            $filter = self::$methodName($item);
             $query->andFilterWhere($filter);
         }
 

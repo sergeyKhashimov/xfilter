@@ -24,7 +24,7 @@ class XFFormHelper
      */
     public static function trimName($name)
     {
-        return trim(trim($name,'1234567890' ),'_');
+        return trim(trim($name,'1234567890' ),'|');
 
     }
 

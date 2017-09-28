@@ -36,8 +36,8 @@ class XFWidget extends Widget
             $this->action = '#';
         }
 
-        foreach (XFQueryBuilder::$rules as $item => $rule){
-            $this->_rules[$item] = trim($rule,'/');
+        foreach (XFQueryBuilder::$rules as $item => $rule) {
+            $this->_rules[ $item ] = trim($rule, '/');
         }
     }
 

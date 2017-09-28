@@ -84,10 +84,10 @@ class XFLoader
     {
         /** @var ActiveRecord $activeRecord */
         $activeRecord = $this->model->className();
-        /** @var ActiveRecord $model */
-        $model = $this->model;
         /** @var ActiveQuery $query */
         $query = $activeRecord::find()->alias($activeRecord::tableName());
+        $distinct = $this->select || $this->count ? $this->model->distinctField() : '';
+        $query->distinct($distinct);
         $query = XFQueryBuilder::build(XFQueryBuilder::joinTables($query, $this->xfConfig), $data);
         $query->addSelect($this->select);
         return $query;
@@ -103,11 +103,13 @@ class XFLoader
         if ($this->count) {
             return $query->count();
         }
-        if (count($this->select) == 1){
-            $needle = explode('.', $this->select[0])[1];
-            return ArrayHelper::getColumn($query->asArray()->all(),function ($e) use ($needle){
-                return $e[$needle];
-            });
+        if (count($this->select) == 1) {
+            $needle = explode('as ', $this->select[0])[1];
+            return ArrayHelper::getColumn(
+                $query->asArray()->all(), function ($e) use ($needle) {
+                return $e[ $needle ];
+            }
+            );
         }
         return $query->asArray()->all();
     }
@@ -120,7 +122,6 @@ class XFLoader
      */
     public function addConfig($inputs, $config)
     {
-
         /** @var XFInpInstance[] $inputs */
         foreach ($inputs as $input) {
             /** @var XFilterBehavior[] $config */
@@ -133,8 +134,6 @@ class XFLoader
             }
         }
         return $inputs;
-
-
     }
 
     /**

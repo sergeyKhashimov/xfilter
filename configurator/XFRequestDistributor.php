@@ -91,10 +91,10 @@ class XFRequestDistributor
             if (!in_array($input->getName(), $registered_fields)) {
                 throw new HttpException(400, "Undefined field " . $input->getName());
             }
-            if (!array_key_exists($input->getOperator(), XFQueryBuilder::$comparators)){
+            if (!array_key_exists($input->getOperator(), XFQueryBuilder::$comparators)) {
                 throw new HttpException(400, "Undefined operator " . $input->getOperator());
             }
-            if (!preg_match(XFQueryBuilder::$rules[$input->getOperator()],$input->getValue())){
+            if (!preg_match(XFQueryBuilder::$rules[ $input->getOperator() ], $input->getValue())) {
                 throw new InputException(400, "Field " . $input->getName() . 'can not be ' . $input->getValue());
             }
         }
